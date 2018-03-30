@@ -47,6 +47,8 @@ orthoimage_path = arcpy.GetParameterAsText(4)
 
 # set the workspace
 arcpy.env.workspace = workspace 
+# Use 8 processes (This setting is used for efficiency comparison in our experiments).
+arcpy.env.parallelProcessingFactor = "8"
 
 # If gdb is not exist, then create it
 if not arcpy.Exists(gdbname):

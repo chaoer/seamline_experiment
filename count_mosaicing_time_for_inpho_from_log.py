@@ -41,12 +41,12 @@ def count_time(log_file_path):
     time_ed_str = ""
     
     for line in file:
-		if line.find("Mosaicking: got all input data, starting processing") != -1:
-			time_st_str = line.split("---")[0]
-		if line.find("Mosaicking: processing done") != -1:
-			time_ed_str = line.split("---")[0]
-		if line.find("Finished processing") != -1:
-			break
+        if line.find("Mosaicking: got all input data, starting processing") != -1:
+            time_st_str = line.split("---")[0]
+        if line.find("Mosaicking: processing done") != -1:
+            time_ed_str = line.split("---")[0]
+        if line.find("Finished processing") != -1:
+            break
 			
     file.close()
     
